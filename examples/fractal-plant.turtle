@@ -1,0 +1,11 @@
+SYMBOL F { WIDTH( max (2, 10 - stack_size) * 2 ); FORWARD( max (4, (10 - stack_size) * 4 ) ) }
+SYMBOL A { ROTATE(25) }
+SYMBOL B { ROTATE(-25) }
+SYMBOL S { PUSH }
+SYMBOL T { POP }
+SYMBOL Q { WIDTH(10) }
+
+RULE X -> { F B S S X T A X T A F S A F X T B X }
+RULE F -> { F F }
+
+START { Q X }

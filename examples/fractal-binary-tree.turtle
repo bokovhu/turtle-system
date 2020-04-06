@@ -1,0 +1,9 @@
+SYMBOL A { WIDTH(10 - stack_size); FORWARD ( (10 - stack_size) * 5) }
+SYMBOL B { WIDTH(10 - stack_size); FORWARD ( (10 - stack_size) * 5) }
+SYMBOL PU { PUSH; ROTATE(45) }
+SYMBOL PO { POP; ROTATE(-45) }
+
+RULE A -> { A A }
+RULE B -> { A PU B PO B }
+
+START { B }

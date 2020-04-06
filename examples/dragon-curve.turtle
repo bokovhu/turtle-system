@@ -1,0 +1,8 @@
+SYMBOL F { FORWARD(10) }
+SYMBOL RL { ROTATE(90) }
+SYMBOL RR { ROTATE(-90) }
+
+RULE X -> { X RR Y F RR }
+RULE Y -> { RL F X RL Y }
+
+START { F X }
