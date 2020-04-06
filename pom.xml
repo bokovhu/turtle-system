@@ -6,7 +6,7 @@
 
     <groupId>me.bokov</groupId>
     <artifactId>turtle-system</artifactId>
-    <version>0.0.1.Snapshot</version>
+    <version>0.0.1</version>
 
     <packaging>jar</packaging>
 
